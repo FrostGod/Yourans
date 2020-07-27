@@ -1,0 +1,26 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <form class="product-form" action="/<% if (editing) { %>edit-product<% } else { %>type<% } %>" method="POST">
+            <div class="form-control">
+                <label for="type">Choose type of Question:</label>
+                <select id = "type" name="type">
+                    <option value="Descriptive">Descriptive Question</option>
+                    <option value="option based">option based</option>
+                </select>
+            </div>
+            
+            <% if (editing) { %>
+               
+            <% } %>
+
+            <button class="btn" type="submit"><% if (editing) { %>Update Product<% } else { %>Proceed<% } %></button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>
