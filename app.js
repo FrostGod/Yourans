@@ -23,7 +23,6 @@ app.use((req , res , next) => {
 
 app.use(allViewsRoutes);
 
-
 app.use(errorController.get404);
 
 app.listen(3000);
